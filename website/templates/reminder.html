@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+  />
+    <title>Reminder</title>
+    <style type="text/css">
+        html, body {
+            min-height: 100%;
+        }
+        body {
+        background: url('static/bohunt.jpg') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+      }
+
+    
+        table{
+                border-collapse: collapse;
+                width:50%;
+                
+            }
+            table th{
+                text-align:center;
+                background-color: #3a6070;
+                color:#FFF;
+                height:70px;
+                border-bottom:1px solid black;
+            }
+            table td {
+                border: 1px solid #e3e3e3;
+                padding:4px 8px;
+                height:70px;
+                text-align:center;
+            }
+            table tr:nth-child(odd) td{
+                background-color: #e7edf0;
+            }
+            .center
+          {
+          margin-left: auto;
+          margin-right: auto;
+          text-align:center;
+          
+          }
+          .center2
+          {
+          margin-left: auto;
+          margin-right: auto;
+          text-align:center;
+          font-weight:Bold;
+          font-family: sans-serif;
+          font-size: 16px;
+          
+          }
+
+          p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+  
+
+
+
+
+      </style>
+</head>
+<body>
+ 
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 14, 2022 13:20:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "LIVE";
+  }
+}, 1000);
+</script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="navbar-nav">
+        {% if user.is_authenticated %}
+        <a class="nav-item nav-link" id="home" href="/">Home</a>
+        <a class="nav-item nav-link" id="lineups" href="/lineups">Lineups</a>
+        <a class="nav-item nav-link" id="table" href="/table">Table</a>
+        <a class="nav-item nav-link" id="stats" href="/stats">Statistics</a>
+        <a class="nav-item nav-link" id="reminder" href="/reminder">Reminder</a>
+        <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+        {% else %}
+        <a class="nav-item nav-link" id="login" href="/login">Login</a>
+        <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <h1 class="center">Countdown to the First game of 2022</h1>
+        <p class="center2" >January 14th 13:20:00</p>   
+    <!-- Page Content -->
+   <!-- Display the countdown timer in an element -->
+   <p id="demo"></p>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='index.js') }}"
+></script>
+</body>
+</html>

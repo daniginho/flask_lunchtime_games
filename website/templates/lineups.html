@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9bcbdf686a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  crossorigin="anonymous"
+/>
+<title>Lineups</title>
+    <style type="text/css">  
+              html, body {
+          min-height: 100%;
+      }
+      body {
+        background: url('static/bohunt.jpg') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+      }
+
+        .pitch{
+        position: absolute;
+        top: 229%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vmin;
+        height: 50vmin;
+        border: 0.5vmin solid white;
+        --green: #4c7;
+        --light: #5d8;
+        background: var(--green);
+        background-image:
+            radial-gradient(circle at 0% 0%, transparent 1%, white 0 1.5%, transparent 0),
+            radial-gradient(circle at 100% 0%, transparent 1%, white 0 1.5%, transparent 0),
+            radial-gradient(circle at 0% 100%, transparent 1%, white 0 1.5%, transparent 0),
+            radial-gradient(circle at 100% 100%, transparent 1%, white 0 1.5%, transparent 0),
+            radial-gradient(circle at 50% 50%, white 1%, transparent 0),
+            radial-gradient(circle at 50% 50%, transparent 14%, white 0 14.75%, transparent 0),
+            radial-gradient(circle at 16% 50%, transparent 10%, white 0 10.5%, transparent 0),
+            radial-gradient(circle at 84% 50%, transparent 10%, white 0 10.5%, transparent 0),
+            linear-gradient(to right, transparent 49.75%, white 0 50.25%, transparent 0),
+            repeating-linear-gradient(to right, var(--green) 0 10%, var(--light) 0 20%);
+        
+        }
+
+        .pitch::before {
+        content:"";
+        display: block;
+        position: absolute;
+        width: 7%;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        height: 25%;
+        background: var(--green);
+        box-shadow: 
+            inset 0 0 0 5vmin var(--green),
+            0 0 0 0.35vmin white,
+            1.2vmin 0 0 1.2vmin var(--green),
+            1.2vmin 4vmin 0 1.2vmin var(--green),
+            1.2vmin -4vmin 0 1.2vmin var(--green),
+            5.2vmin 0 0 5.2vmin var(--light),
+            5.2vmin 0 0 5.5vmin white,
+            74.5vmin 0 var(--light),
+            74.5vmin 0 0 0.35vmin white,
+            73.3vmin 0 0 1.2vmin var(--light),
+            73.3vmin 4vmin 0 1.2vmin var(--light),
+            73.3vmin -4vmin 0 1.2vmin var(--light),
+            69.2vmin 0 0 5.2vmin var(--green),
+            69.2vmin 0 0 5.5vmin white,
+            -4vmin 0 0 -2vmin #0003,
+            78.5vmin 0 0 -2vmin #0003
+        }
+
+        .pitch::after {
+        content: "";
+        white-space: pre;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4vmin;
+        font-weight: bold;
+        font-style: italic;
+        color: white;
+        font-family: arial, verdana, sans-serif;
+        position: absolute;
+        border-radius: 50%;
+        height: 2.5vmin;
+        width: 2.5vmin;
+        left: 50%;
+        top: -7.5%;
+        transform: translate(-50%, -50%);
+        box-shadow:
+            -29vmin 29vmin 0 -0.9vmin white,
+            29vmin 29vmin 0 -0.9vmin white,
+            
+            -38vmin 29vmin #fe3,
+            -24vmin 5vmin #369,
+            -24vmin 10vmin #369,
+            -24vmin 15vmin #369,
+            -24vmin 20vmin #369,
+            -24vmin 25vmin #369,
+            -24vmin 30vmin #369,
+            -24vmin 35vmin #369,
+            -24vmin 40vmin #369,
+            -24vmin 45vmin #369,
+            -24vmin 50vmin #369,
+            -16vmin 10vmin #369,
+            -16vmin 15vmin #369,
+            -16vmin 20vmin #369,
+            -16vmin 25vmin #369,
+            -16vmin 30vmin #369,
+            -16vmin 35vmin #369,
+            -16vmin 40vmin #369,
+            -16vmin 45vmin #369,
+            -8vmin  48vmin #369,
+            -8vmin  7vmin #369,
+            -12vmin 30vmin #369,
+            -12vmin 25vmin #369,
+            -8vmin 27.5vmin #369,
+            -4vmin 27.5vmin #369,
+            -4vmin 30vmin #369,
+            -4vmin 25vmin #369,
+            
+            
+        
+
+            
+            
+            36vmin 29vmin #49f,
+            24vmin 10vmin #c33,
+            24vmin 15vmin #c33,
+            24vmin 20vmin #c33,
+            24vmin 25vmin #c33,
+            24vmin 30vmin #c33,
+            24vmin 35vmin #c33,
+            24vmin 40vmin #c33,
+            24vmin 45vmin #c33,
+            
+            16vmin 10vmin #c33,
+            16vmin 15vmin #c33,
+            16vmin 20vmin #c33,
+            16vmin 25vmin #c33,
+            16vmin 30vmin #c33,
+            16vmin 35vmin #c33,
+            16vmin 40vmin #c33,
+            16vmin 45vmin #c33,
+            8vmin  48vmin #c33,
+            8vmin  7vmin #c33,
+            12vmin 30vmin #c33,
+            12vmin 25vmin #c33,
+            12vmin 40vmin #c33,
+            12vmin 45vmin #c33,
+            12vmin 50vmin #c33,
+            12vmin 5vmin #c33,
+            12vmin 10vmin #c33,
+            12vmin 15vmin #c33,
+            8vmin 27.5vmin #c33,
+            4vmin 15vmin #c33,
+            4vmin 30vmin #c33,
+            4vmin 20vmin #c33,
+            4vmin 35vmin #c33,
+            4vmin 40vmin #c33,
+            
+            -2vmin 21vmin #222
+            
+            
+} 
+      </style>
+</head>
+<body>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          {% if user.is_authenticated %}
+          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="lineups" href="/lineups">Lineups</a>
+          <a class="nav-item nav-link" id="table" href="/table">Table</a>
+          <a class="nav-item nav-link" id="stats" href="/stats">Statistics</a>
+          <a class="nav-item nav-link" id="reminder" href="/reminder">Reminder</a>
+          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+          {% else %}
+          <a class="nav-item nav-link" id="login" href="/login">Login</a>
+          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>     
+      <!-- Page Content -->
+ <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <h1 class="center">Eversley<br>Non-Eversley</h1>
+        <p class="center2" >The battle of the ages</p>
+    <div class="pitch"></div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='index.js') }}"
+  ></script>
+
+
+    
+    </div>
+  </div>
+</div>
+</body>
+</html>
