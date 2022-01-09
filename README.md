@@ -42,3 +42,12 @@ source ./.venv/bin/activate
 pipenv lock -r > requirements.txt  
 ```
 
+## Docker
+
+```sh
+# build
+docker build -t flask_lunchtime_games .
+
+# run
+docker run -p 5000:5000 flask_lunchtime_games   
+```
