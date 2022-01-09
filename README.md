@@ -8,17 +8,6 @@ TODO:
 * Deploy to heroku
 * Github actions.
 
-
-```bash
-pip install -r requirements.txt
-```
-
-## Running The App
-
-```bash
-python main.py
-```
-
 ## Viewing The App
 
 Go to `http://127.0.0.1:5000`
@@ -46,7 +35,16 @@ pipenv shell
 # or
 source ./.venv/bin/activate
 
+# install libraries
+pip install -r requirements.txt
+
 # after adding packages
 pipenv lock -r > requirements.txt  
+```
+
+## Running The App
+
+```bash
+python main.py
 ```
 
