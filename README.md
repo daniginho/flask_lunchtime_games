@@ -1,15 +1,12 @@
 # flask_lunchtime_games
 
+TODO:
 
-```bash
-pip install -r requirements.txt
-```
-
-## Running The App
-
-```bash
-python main.py
-```
+* Setup with pyenv
+* Setup the app with pipenv
+* Dockerise the app
+* Deploy to heroku
+* Github actions.
 
 ## Viewing The App
 
@@ -38,8 +35,17 @@ pipenv shell
 # or
 source ./.venv/bin/activate
 
+# install libraries
+pip install -r requirements.txt
+
 # after adding packages
 pipenv lock -r > requirements.txt  
+```
+
+## Running The App
+
+```bash
+python main.py
 ```
 
 ## Docker
@@ -51,3 +57,4 @@ docker build -t flask_lunchtime_games .
 # run
 docker run -p 5000:5000 flask_lunchtime_games   
 ```
+
