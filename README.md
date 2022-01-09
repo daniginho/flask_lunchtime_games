@@ -58,3 +58,10 @@ docker build -t flask_lunchtime_games .
 docker run -p 5000:5000 flask_lunchtime_games   
 ```
 
+## Heroku
+
+```sh
+# open heroku dashboard and create a lunchtimegames app.
+open https://dashboard.heroku.com/
+```
+
