@@ -1,5 +1,13 @@
 # flask_lunchtime_games
 
+TODO:
+
+* Setup with pyenv
+* Setup the app with pipenv
+* Dockerise the app
+* Deploy to heroku
+* Github actions.
+
 
 ```bash
 pip install -r requirements.txt
