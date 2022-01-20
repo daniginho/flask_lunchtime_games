@@ -155,7 +155,38 @@ table.menu1 {
         <div class="card border-0 shadow my-5">
           <div class="card-body p-5">
             <h1 class="center">Eversley v Non-Eversley</h1>
-            <p class="center2" >The battle of the ages</p>
+            <p class="center2" >The battle of the ages Von Neumann architecture is the design upon which many general purpose computers are based. The key elements of Von Neumann architecture are:
+
+data and instructions are both stored as binary digits
+data and instructions are both stored in primary memory
+instructions are fetched from memory one at a time and in order (serially)
+the processor decodes and executes an instruction, before cycling around to fetch the next instruction
+the cycle continues until no more instructions are available
+A processor based on Von Neumann architecture has five special registers which it uses for processing:
+
+program counter - holds the memory address of the next instruction to be fetched from primary memory
+memory address register (MAR) - holds the address of the current instruction that is to be fetched from memory, or the address in memory to which data is to be transferred
+memory data register (MDR) - holds the contents found at the address held in the MAR, or data which is to be transferred to primary memory
+current instruction register (CIR) - holds the instruction that is currently being decoded and executed
+accumulator (ACC) – holds the data being processed and the results of processing
+Using the registers and the key elements of the Von Neumann architecture, we can now look at how an instruction is processed in the fetch-decode-execute cycle.
+
+The fetch-decode-execute cycle
+
+The fetch-decode-execute cycle is followed by a processor to process an instruction. The cycle consists of several stages.
+
+The memory address held in the program counter is copied into the MAR.
+The address in the program counter is then incremented (increased) by one. The program counter now holds the address of the next instruction to be fetched.
+The processor sends a signal along the address bus to the memory address held in the MAR.
+The instruction/data held in that memory address is sent along the data bus to the MDR.
+The instruction/data held in the MDR is copied into the CIR.
+The instruction/data held in the CIR is decoded and then executed. Results of processing are stored in the ACC.
+The cycle then returns to step one.
+Depending on the type of instruction, additional steps may be taken:
+
+If the instruction is to transfer data held in the ACC back to primary memory, the intended memory address is copied into the MAR. The data to be transferred is copied into the MDR and then transferred to the specified address using the address bus and data bus.
+The executed instruction may require the program to jump to a different place in the program. In this case, the memory address of the new next instruction to be fetched is copied into the program counter. The process then restarts at step one.</p>
+            
             <td style="text-align: left"></td>
             <table class="content-table menu1">
                 <thead>
